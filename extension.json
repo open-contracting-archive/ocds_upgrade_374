@@ -1,0 +1,1 @@
+{"name":"ocds_upgrade_374","desription":"This extension exists to stage the proposal from [issue 374](https://github.com/open-contracting/standard/issues/374) that the ```tender``` section should have a ```contractPeriod``` property."}

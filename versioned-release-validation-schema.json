@@ -1,0 +1,18 @@
+{
+  "definitions": {
+    "Tender": {
+      "properties": {
+        "contractPeriod": {
+          "$ref": "#/definitions/Period"
+        }
+      }
+    },
+    "TenderUnversioned": {
+      "properties": {
+        "contractPeriod": {
+          "$ref": "#/definitions/PeriodUnversioned"
+        }
+      }
+    }
+  }
+}
