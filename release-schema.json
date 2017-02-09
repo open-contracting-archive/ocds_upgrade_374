@@ -1,1 +1,38 @@
-{"definitions":{"Tender":{"properties":{"contractPeriod":{"title":"Contract period","description":"The anticipated start and end dates for the contract.","$ref":"#/definitions/Period"},"contractDuration":{"title":"Contract duration","description":"The anticipated duration of the contract using [ISO8601 duration format](https://en.wikipedia.org/wiki/ISO_8601#Durations).","type":["string","null"],"format":"duration","mergeStrategy":"ocdsVersion"}}}}}
+{
+  "definitions": {
+    "Tender": {
+      "properties": {
+        "awardPeriod": {
+          "title":"Evaluation and award period",
+          "description": "The period for adjudication and selection of the contract award. The end date should be the date on which an award is due to be finalised. The start date may be used to indicate the start of an evaluation period."
+        },
+        "contractPeriod": {
+          "$ref": "#/definitions/Period",
+          "description": "The period over which the contract is estimated or required to be active. If the tender does not specify explicit dates, the duration field may be used.",
+          "title": "Contract period"
+        }
+      }
+    },
+    "Period": {
+      "properties": {
+        "maxExtentDate": {
+          "title": "Maximum extent",
+          "description": "The period cannot be extended beyond this date.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "durationInDays": {
+          "title": "Duration (days)",
+          "description": "The maximum duration of this period in days. Where a start and end date are given, this field is optional, and should reflect the difference between those two days.",
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      }
+    }
+  }
+}
